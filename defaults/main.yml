@@ -1,0 +1,10 @@
+# Copyright: 2016 LasLabs, Inc
+---
+# defaults file for ssh-key-deployer
+
+# LDAP Defaults
+ldap_server: ex-dc-prod-vmw-01.corp.example.com
+ldap_bind_dn: svc.ro-bind@corp.example.com
+# ldap_bind_pw @SEE ad.vault.yml
+ldap_user_base: OU=Example,DC=corp,DC=example,DC=com
+ldap_filter: (uidNumber=*)

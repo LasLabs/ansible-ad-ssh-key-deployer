@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Ted Salmon <tsalmon@laslabs.com>
+  description: Automate 
+  company: LasLabs Inc.
+  license: license (AGPL)
+  min_ansible_version: 1.2
+  platforms:
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - cloud
+  - system
+dependencies: []
