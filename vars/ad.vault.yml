@@ -1,0 +1,3 @@
+# Copyright: 2016 LasLabs, Inc
+
+ldap_bind_pw: somepasswordthatissecure

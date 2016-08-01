@@ -1,0 +1,11 @@
+# Copyright 2016 LasLabs Inc.
+---
+# tasks file for ssh-key-deployer
+- include_vars: main.yml
+- include_vars: ad.vault.yml
+
+- name: Install SSH Key Updater as a daily cronjob
+  template: src=ssh_key_manager.py dest=/etc/cron.daily/ssh_key_manager.py owner=root group=root mode=0700
+
+- name: Run SSH Key Updater
+  command: /etc/cron.daily/ssh_key_manager.py
