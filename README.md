@@ -1,4 +1,4 @@
-[![License: Apache 2.0]]
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 Active Directory SSH Key Deployer
 =================================
@@ -56,12 +56,8 @@ Contributors
 Maintainer
 ----------
 
-[![LasLabs Inc.]]
+[![LasLabs Inc.](https://laslabs.com/logo.png)](https://laslabs.com)
 
-This module is maintained by LasLabs Inc.
+This module is maintained by [LasLabs Inc.](https://laslabs.com)
 
-  [License: Apache 2.0]: https://img.shields.io/badge/license-Apache--2.0-blue.svg
-  [![License: Apache 2.0]]: https://www.apache.org/licenses/LICENSE-2.0.html
-  [Icon]: https://repo.laslabs.com/projects/TEM/repos/odoo-module_template/browse/module_name/static/description/icon.svg?raw
-  [LasLabs Inc.]: https://laslabs.com/logo.png
-  [![LasLabs Inc.]]: https://laslabs.com
+* https://github.com/LasLabs/ansible-ad-ssh-key-deployer
