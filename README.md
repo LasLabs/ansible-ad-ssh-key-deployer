@@ -1,12 +1,15 @@
-.. image:: https://img.shields.io/badge/license-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-   :alt: License: AGPL-3
+[![License: Apache 2.0]]
 
-=================================
 Active Directory SSH Key Deployer
 =================================
 
-Deploys SSH public keys stored in AD to a slew of hosts
+Deploys SSH public keys stored in AD to a slew of hosts.
+
+This automation requires specific setup in your Active Directory environment,
+as described in the following blog posts:
+
+* [Storing SSH Keys in Active Directory for Easy Deployment](https://blog.laslabs.com/2016/08/storing-ssh-keys-in-active-directory/)
+* [Managing SSH Keys Storedd in Active Directory](https://blog.laslabs.com/2017/04/managing-ssh-keys-stored-in-active-directory/)
 
 Requirements
 ------------
@@ -15,11 +18,12 @@ There are no prerequisites.
 
 Role Variables
 --------------
-ldap_server - The FQDN of the AD DC server.
-ldap_bind_dn - The user to bind to the directory with.
-ldap_bind_pw - The password for the bind user.
-ldap_user_base - The top level DN of your AD where users are stored.
-ldap_filter - The filter to use to get only valid Linux users
+
+* `ldap_server` - The FQDN of the AD DC server.
+* `ldap_bind_dn` - The user to bind to the directory with.
+* `ldap_bind_pw` - The password for the bind user.
+* `ldap_user_base` - The top level DN of your AD where users are stored.
+* `ldap_filter` - The filter to use to get only valid Linux users
 
 Dependencies
 ------------
@@ -28,7 +32,8 @@ There are no dependencies.
 
 Example Playbook
 ----------------
-```
+
+``` yaml
     - hosts: servers
       roles:
          - { role: ssh-key-deployer,
@@ -39,26 +44,24 @@ Example Playbook
              ldap_filter: (uidNumber=*) }
 ```
 
-License
+Credits
 =======
-
-AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-
-Images
-------
-
-* LasLabs: `Icon <https://repo.laslabs.com/projects/TEM/repos/odoo-module_template/browse/module_name/static/description/icon.svg?raw>`_.
 
 Contributors
 ------------
 
-* Ted Salmon <tsalmon@laslabs.com> LasLabs, Inc.
+-   Ted Salmon &lt;<tsalmon@laslabs.com>&gt;
+-   Dave Lasley &lt;<dave@laslabs.com>&gt;
 
 Maintainer
 ----------
 
-.. image:: https://laslabs.com/logo.png
-   :alt: LasLabs Inc.
-   :target: https://laslabs.com
+[![LasLabs Inc.]]
 
 This module is maintained by LasLabs Inc.
+
+  [License: Apache 2.0]: https://img.shields.io/badge/license-Apache--2.0-blue.svg
+  [![License: Apache 2.0]]: https://www.apache.org/licenses/LICENSE-2.0.html
+  [Icon]: https://repo.laslabs.com/projects/TEM/repos/odoo-module_template/browse/module_name/static/description/icon.svg?raw
+  [LasLabs Inc.]: https://laslabs.com/logo.png
+  [![LasLabs Inc.]]: https://laslabs.com
