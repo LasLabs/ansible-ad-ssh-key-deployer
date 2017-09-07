@@ -34,13 +34,15 @@ Example Playbook
 ----------------
 
 ``` yaml
+    ---
     - hosts: servers
+      become: true
       roles:
          - { role: ssh-key-deployer,
-             ldap_server: ex-dc-prod-vmw-01.corp.example.com,
+             ldap_server: "ldap://ex-dc-prod-vmw-01.corp.example.com",
              ldap_bind_dn: svc.ro-bind@corp.example.com,
              ldap_bind_pw: somepasswd,
-             ldap_user_base: OU=Example,DC=corp,DC=example,DC=com,
+             ldap_user_base: "OU=Example,DC=corp,DC=example,DC=com",
              ldap_filter: (uidNumber=*) }
 ```
 
